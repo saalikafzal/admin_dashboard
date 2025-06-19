@@ -1,0 +1,354 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* ========== Core Color Palette ========== */
+    --color-muted-green: #819A91;    /* Primary dark green */
+    --color-soft-green: #A7C1A8;     /* Secondary green */
+    --color-cream-green: #D1D8BE;    /* Light green-cream */
+    --color-light-cream: #EEEFE0;    /* Off-white cream */
+    
+    /* ========== Complementary Additions ========== */
+    --color-dark-charcoal: #2F3E46;  /* For text and deep accents */
+    --color-warm-gray: #6B7D7D;      /* For secondary text */
+    --color-accent: #7A918D;         /* Subtle teal accent */
+    --color-shadow: rgba(47, 62, 70, 0.1); /* Soft shadows */
+    
+    /* ========== Semantic Assignments ========== */
+    --color-bg-page: var(--color-light-cream);
+    --color-bg-sidebar: var(--color-muted-green);
+    --color-bg-content: var(--color-light-cream);
+    --color-bg-cards: var(--color-light-cream);
+    --color-bg-accent: var(--color-soft-green);
+    
+    --color-text-dark: var(--color-dark-charcoal);
+    --color-text-light: var(--color-light-cream);
+    --color-text-secondary: var(--color-warm-gray);
+    --color-text-accent: var(--color-accent);
+    
+    --color-border: rgba(129, 154, 145, 0.3);
+    
+    font-family: 'Helvetica Neue', sans-serif; /* More modern font */
+}
+
+/* ========== Component Styles ========== */
+body {
+    color: var(--color-text-dark);
+}
+
+.sidebar {
+    background-color: var(--color-bg-sidebar);
+    color: var(--color-text-light);
+    width: min(15em, 25%);
+    min-width: 15em; /* Ensures minimum width */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%; /* Changed from fit-content */
+}
+
+.main_content {
+    flex: 1; /* Takes remaining space */
+    min-width: 0; /* Allows proper shrinking */
+}
+
+.main_content_header {
+    background-color: var(--color-light-cream);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.product {
+    background-color: var(--color-bg-cards);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 6px var(--color-shadow);
+    transition: transform 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+.announcement, .trend {
+    background-color: var(--color-light-cream);
+    border-left: 3px solid var(--color-soft-green);
+    transition: all 0.3s ease;
+}
+
+.announcement:hover, .trend:hover {
+    background-color: var(--color-cream-green);
+}
+
+.main_content_actions>div>button {
+    background-color: var(--color-muted-green);
+    color: var(--color-text-light);
+    transition: all 0.2s ease;
+}
+
+.main_content_actions>div>button:hover {
+    background-color: var(--color-accent);
+    transform: scale(1.02);
+}
+
+a {
+    padding-left: 3em;
+    color: var(--color-text-dark);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+.heading {
+    color: var(--color-muted-green);
+    position: relative;
+    padding-bottom: 0.3rem;
+}
+
+.sub_heading {
+    color: var(--color-text-secondary);
+}
+
+/* ========== Refined UI Details ========== */
+nav a {
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: rgba(167, 193, 168, 0.2);
+}
+
+#search_box {
+    background-color: var(--color-light-cream);
+    border: 1px solid var(--color-border);
+}
+
+svg {
+    fill: currentColor; /* Allows SVG colors to adapt */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+svg{
+    fill: var(--color-text-light);
+}
+.page{
+    background-color: var(--color-bg-page);
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    min-height: 100vh;
+    height: fit-content;
+    width: fit-content;
+    align-items: stretch;
+}
+.sidebar{
+    background-color: var(--color-bg-sidebar);
+    color: var(--color-text-light);
+    /* border: 2px solid red; */
+    width: min(12em, 25%);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+.sidebar>h1{
+    display: flex;
+    gap: 10px;
+    font-size: 1.4em;
+    font-weight: 800;
+    /* border: 2px solid red; */
+}
+svg{
+    height: 1.5em;
+    width: auto;
+    flex-shrink: 0;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    gap: 1em;
+}
+a[title="Settings"] {
+    margin-top: 2em;
+}
+a:hover{
+    transform: scale(1.1);
+    color: var(--color-primary-darker);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+a:active{
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: var(--color-primary-lighter);
+    transform: scale(1.05);
+    font-weight: 600;
+}
+.main_content{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+}
+.main_content_header{
+    color: var(--color-text-light);
+    background-color: var(--color-bg-sidebar);
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    max-height: 10em;
+}
+.main_content_search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    /* border: 2px solid blue; */
+    padding: 1em;
+}
+#search_box{
+    flex-grow: 100;
+    height: 3em;
+    padding: 20px;
+}
+#search_options{
+    /* border: 2px solid orange; */
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+#search_options>h2{
+    /* border: 2px solid black; */
+    display: flex;
+    width: 7em
+}
+.main_content_actions{
+    padding: 1em;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid blue; */
+}
+#odin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+#odin_logo{
+    width: 30px;
+    height: 40px;
+}
+.main_content_actions>div>button{
+    outline: none;
+    border: none;
+    padding: 0.2em 0.8em;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border-radius: 30px;
+    box-shadow: none;
+}
+.main_content_actions>div>button:hover{
+    background-color: var(--color-text-light);
+    color: var(--color-text-dark);
+}
+.main_content_body{
+    flex: 5;
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template: 1fr 1fr/2fr 1fr;
+    gap: 2em;
+    padding: 2em;
+}
+.products{
+    color: var(--color-primary);
+    grid-area: 1/1/3/2;
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+    gap: 2em;
+}
+.product{
+    border-radius: 0.5em;
+    background-color: var(--color-text-light);
+    /* border: 2px solid orange; */
+    width: 20em;
+    height: 20em;
+}
+.announcements{
+    background-color: var(--color-bg-accent);
+    grid-area: 1/2/2/3;
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+    border-radius: 1em;
+    flex-direction: column;
+    /* border: 2px solid blue; */
+}
+.heading{
+    color: var(--color-text-light);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+.sub_heading{
+    color: var(--color-text-dark);
+    font-size: 1.2em;
+}
+.announcement{
+    background-color: var(--color-bg-sidebar);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.5em;
+    border-radius: 1em;
+    /* border: 2px solid red; */
+}
+.trending{
+    background-color: var(--color-bg-accent);
+    grid-area: 2/2/3/3;
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+    border-radius: 1em;
+    flex-direction: column;
+    /* border: 2px solid blue; */
+}
+.trend{
+    background-color: var(--color-bg-sidebar);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.5em;
+    border-radius: 1em;
+    /* border: 2px solid red; */
+}
+.announcement p, .trend p{
+    color: var(--color-primary);
+}

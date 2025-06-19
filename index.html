@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="page">
+        <div class="sidebar">
+             <h1>
+                <svg id="icon_dashboard" viewBox="0 0 24 24"><path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" /></svg>
+                <span>Dashboard</span>
+            </h1>
+            <nav>
+                <a title="Home" href="#"><svg id="icon_home" viewBox="0 0 24 24"><path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg><span>Home</span></a>
+                <a title="Profile" href="#"><svg id="icon_profile" viewBox="0 0 24 24"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg><span>Profile</span></a>
+                <a title="Messages" href="#"><svg id="icon_messages" viewBox="0 0 24 24"><path d="M22,4C22,2.89 21.1,2 20,2H4A2,2 0 0,0 2,4V16A2,2 0 0,0 4,18H18L22,22V4Z" /></svg><span>Messages</span></a>
+                <a title="History" href="#"><svg id="icon_history" viewBox="0 0 24 24"><path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" /></svg><span>History</span></a>
+                <a title="Tasks" href="#"><svg id="icon_tasks" viewBox="0 0 24 24"><path d="M16,9H21.5L16,3.5V9M7,2H17L23,8V18A2,2 0 0,1 21,20H7C5.89,20 5,19.1 5,18V4A2,2 0 0,1 7,2M3,6V22H21V24H3A2,2 0 0,1 1,22V6H3Z" /></svg><span>Tasks</span></a>
+                <a title="Communities" href="#"><svg id="icon_communities" viewBox="0 0 24 24"><path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" /></svg><span>Communities</span></a>
+                <a title="Settings" href="#"><svg id="icon_settings" viewBox="0 0 24 24"><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" /></svg><span>Settings</span></a>
+                <a title="Support" href="#"><svg id="icon_support" viewBox="0 0 24 24"><path d="M11,18H13V16H11V18M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z" /></svg><span>Support</span></a>
+                <a title="Privacy" href="#"><svg id="icon_privacy" viewBox="0 0 24 24"><path d="M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1Z" /></svg><span>Privacy</span></a>
+            </nav>
+        </div>
+        <div class="main_content">
+            <div class="main_content_header">
+                <div class="main_content_search">
+                    <input type="search" id="search_box" placeholder="search...">
+                    <div id="search_options">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <!-- Face circle -->
+                                <circle cx="10" cy="10" r="9" stroke="#000000" stroke-width="0.5"/>
+  
+                                 <!-- Eyes -->
+                                <circle cx="7" cy="8" r="1.5" fill="#000000"/>
+                                <circle cx="13" cy="8" r="1.5" fill="#000000"/>
+  
+                                <!-- Smile -->
+                                <path d="M6,12 Q10,16 14,12" 
+                                    stroke="#000000" 
+                                    stroke-width="1.5" 
+                                    fill="none" 
+                                    stroke-linecap="round"/>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                            <ellipse cx="10" cy="10" rx="8" ry="4" 
+                                stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <ellipse cx="10" cy="10" rx="4" ry="8" 
+                                stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        <h2>James Walter</h2>
+                    </div>
+                </div>
+                <div class="main_content_actions">
+                    <div id="odin">
+                        <svg width="44" height="60" viewBox="0 0 44 60" fill="none" xmlns="http://www.w3.org/2000/svg" id="odin_logo">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68927 35.4922L13.148 20.0493H30.9831L35.4419 35.4922H8.68927Z" fill="#EED9C3"/>
+                        <ellipse cx="27.7848" cy="27.8815" rx="1.26005" ry="1.24284" fill="#353535"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.446 26.4685C19.446 26.0344 19.0892 25.6826 18.6493 25.6826C17.6381 25.6826 15.9035 25.6826 14.8922 25.6826C14.4524 25.6826 14.0955 26.0344 14.0955 26.4685C14.0955 27.1449 14.0955 28.1309 14.0955 28.9019C14.0955 29.5527 14.6306 30.0805 15.2903 30.0805C15.6996 30.0805 16.1763 30.0805 16.6579 30.0805C17.3973 30.0805 18.1063 29.7907 18.6295 29.2748C19.1523 28.7594 19.446 28.0597 19.446 27.3305C19.446 27.0178 19.446 26.7214 19.446 26.4685Z" fill="#A78347"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.0003 5.29008L43.8516 0.759277L39.0002 18.7593L35.0002 22.7593L35.0003 5.29008Z" fill="#E3B261"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.85146 5.29008L0.000193596 0.759277L4.85162 18.7593L8.85162 22.7593L8.85146 5.29008Z" fill="#E3B261"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.4419 13.5028C35.4419 13.5028 28.7537 9.10498 22.0656 9.10498C15.3774 9.10498 8.68927 13.5028 8.68927 13.5028V26.6964L10.4728 30.2147C11.7525 25.352 17.5443 23.3263 21.5759 26.3314L22.0656 26.6964L22.5553 26.3314C26.5868 23.3263 32.3786 25.352 33.6583 30.2147L35.4419 26.6964V13.5028Z" fill="#E3B261"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6068 33.2935L14.0398 53.9634L9.12134 50.4451L13.148 35.4924L17.6068 33.2935Z" fill="#D4D4D4"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.5244 33.2935L30.0914 53.9634L35.0098 50.4451L30.9831 35.4924L26.5244 33.2935Z" fill="#D5D5D5"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68927 26.6968L5.12225 39.8904L9.58102 48.6861L13.148 35.4925L8.68927 26.6968Z" fill="#E6E6E6"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.4418 26.6968L39.0089 39.8904L34.5501 48.6861L30.9831 35.4925L35.4418 26.6968Z" fill="#E6E6E6"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6068 33.2937L13.5939 54.8432L22.0655 59.2411L30.5372 54.8432L26.5243 33.2937L22.3981 31.2588L22.0655 31.0947L17.6068 33.2937Z" fill="#E6E6E6"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.6636 34.1729H20.5425C20.5425 34.1729 20.5425 34.694 20.5425 35.2732C20.5425 35.6813 20.707 36.0723 20.9995 36.3608C21.292 36.6493 21.6884 36.8116 22.1022 36.8116C22.1026 36.8116 22.1035 36.8116 22.1039 36.8116C22.5177 36.8116 22.9141 36.6493 23.2066 36.3608C23.4991 36.0723 23.6636 35.6813 23.6636 35.2732C23.6636 34.694 23.6636 34.1729 23.6636 34.1729Z" fill="#353535"/>
+                    </svg>
+                    <h3>The Odin project</h3>
+                    </div>
+                    <div>
+                        <button>New</button>
+                        <button>Upload</button>
+                        <button>Share</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main_content_body">
+                <div class="products">
+                    <div class="product"></div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                    <div class="product"></div>
+                </div>
+                <div class="announcements">
+                    <h1 class="heading">Announcements</h1>
+                    <div class="announcement">
+                        <h2 class="sub_heading">Beta Testing</h2>
+                        <p>A new feature released, you can download the new update and test it yourself</p>
+                    </div>
+                    <div class="announcement">
+                        <h2 class="sub_heading">Beta Testing</h2>
+                        <p>A new feature released, you can download the new update and test it yourself</p>
+                    </div>
+                    <div class="announcement">
+                        <h2 class="sub_heading">Beta Testing</h2>
+                        <p>A new feature released, you can download the new update and test it yourself</p>
+                    </div>
+                </div>
+                <div class="trending">
+                    <h1 class="heading">Trending</h1>
+                    <div class="trend">
+                        <h2 class="sub_heading">Iran-Isreal</h2>
+                        <p>The tensions in middle have reached a new height</p>
+                    </div>
+                    <div class="trend">
+                        <h2 class="sub_heading">Iran-Isreal</h2>
+                        <p>The tensions in middle have reached a new height</p>
+                    </div>
+                    <div class="trend">
+                        <h2 class="sub_heading">Iran-Isreal</h2>
+                        <p>The tensions in middle have reached a new height</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
